@@ -1,6 +1,6 @@
 import React from 'react';
 import logoImg from '../../assets/logo.png'
-import { Link } from 'react-router';
+import { Link, Navigate } from 'react-router';
 
 const Navbar = () => {
     const links = <>
@@ -36,7 +36,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white">Contribute</a>
                 </div>
             </div>
         </div>

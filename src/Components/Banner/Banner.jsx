@@ -4,7 +4,7 @@ import AppStore from '../../assets/App_Store_(iOS)-Logo.wine.png';
 
 const Banner = () => {
     return (
-        <div className='border-2 w-2/3 mx-auto'>
+        <div className=' w-2/3 mx-auto'>
             <h1 className='text-center text-5xl font-bold'>We Build <br />
                 <span className='text-purple-500'>Productive</span> Apps</h1>
             <p className='m-2 text-center text-gray-500'>At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
