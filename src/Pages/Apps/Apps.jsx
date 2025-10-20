@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router';
 import SingleApp from '../SingleApp/SingleApp';
+import { IoSearch } from "react-icons/io5";
 
 const Apps = () => {
     const data = useLoaderData();
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
 
-    // 🔍 Filter apps by title (case-insensitive)
     const filteredApps = data.filter(app =>
         app.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -21,13 +21,17 @@ const Apps = () => {
                 <h1 className='text-xl font-bold'>
                     ({filteredApps.length}) Apps found
                 </h1>
-                <input
-                    type='text'
-                    placeholder='Search apps...'
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className='border rounded-lg px-4 py-2 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-purple-500'
-                />
+
+                <div className='relative w-full md:w-64'>
+                    <IoSearch className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl' />
+                    <input
+                        type='text'
+                        placeholder='Search apps...'
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className='border rounded-lg pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-purple-500'
+                    />
+                </div>
             </div>
 
             {filteredApps.length > 0 ? (
@@ -41,12 +45,14 @@ const Apps = () => {
                     <p className='text-center text-gray-500 mt-10 text-4xl font-medium'>
                         No App Found
                     </p>
-                    <button
-                        onClick={() => navigate('/')}
-                        className='bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-lg transition-all r'
-                    >
-                        Show All
-                    </button>
+                    <div className='flex justify-center mt-5'>
+                        <button
+                            onClick={() => navigate('/')}
+                            className='bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-lg transition-all '
+                        >
+                            Show All
+                        </button>
+                    </div>
                 </div>
 
             )}
