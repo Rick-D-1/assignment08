@@ -17,7 +17,7 @@ const Apps = () => {
             <h1 className='text-center text-3xl font-bold mb-2'>Our All Applications</h1>
             <p className='text-center mb-6'>Explore All Apps on the Market developed by us. We code for Millions</p>
 
-            <div className='flex flex-col md:flex-row justify-between items-center gap-3 mb-6'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-3 mb-6 '>
                 <h1 className='text-xl font-bold'>
                     ({filteredApps.length}) Apps found
                 </h1>
@@ -48,9 +48,9 @@ const Apps = () => {
                     <div className='flex justify-center mt-5'>
                         <button
                             onClick={() => navigate('/')}
-                            className='bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-lg transition-all '
+                            className='bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white  font-semibold px-6 py-2 rounded-lg transition-all '
                         >
-                            Show All
+                            Go Back!
                         </button>
                     </div>
                 </div>

@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "image": "https://cdn-icons-png.flaticon.com/512/733/733558.png",
-        "title": "WhatsApp Messenger",
+        "image": "https://i.ibb.co.com/Q7y8KJ24/download-3.jpg",
+        "title": "Messenger",
         "companyName": "Meta Platforms",
         "description": "Fast, simple, secure messaging and calling for free, available worldwide.",
         "size": 120,
@@ -34,7 +34,7 @@
     },
     {
         "id": 2,
-        "image": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+        "image": "https://i.ibb.co.com/1YLxftRX/download-11.png",
         "title": "LinkedIn",
         "companyName": "Microsoft Corporation",
         "description": "Connect with professionals, find jobs, and grow your career with LinkedIn.",
@@ -67,7 +67,7 @@
     },
     {
         "id": 3,
-        "image": "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
+        "image": "https://i.ibb.co.com/6RB3xCDz/download-1.jpg",
         "title": "Instagram",
         "companyName": "Meta Platforms",
         "description": "Share your moments, explore photos and videos from around the world.",
@@ -100,7 +100,7 @@
     },
     {
         "id": 4,
-        "image": "https://cdn-icons-png.flaticon.com/512/5968/5968841.png",
+        "image": "https://i.ibb.co.com/0RJwxmM9/download-10.png",
         "title": "Spotify",
         "companyName": "Spotify AB",
         "description": "Stream millions of songs and podcasts for free or with Premium.",
@@ -133,7 +133,7 @@
     },
     {
         "id": 5,
-        "image": "https://cdn-icons-png.flaticon.com/512/300/300221.png",
+        "image": "https://i.ibb.co.com/zTJXrqHH/download-9.png",
         "title": "YouTube",
         "companyName": "Google LLC",
         "description": "Watch, stream, and discover millions of videos from around the globe.",
@@ -166,7 +166,7 @@
     },
     {
         "id": 6,
-        "image": "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+        "image": "https://i.ibb.co.com/fz96gpKq/download-8.png",
         "title": "Twitter (X)",
         "companyName": "X Corp.",
         "description": "Follow what’s happening around the world in real-time on X (formerly Twitter).",
@@ -199,7 +199,7 @@
     },
     {
         "id": 7,
-        "image": "https://cdn-icons-png.flaticon.com/512/300/300220.png",
+        "image": "https://i.ibb.co.com/yn67XdMz/download-7.png",
         "title": "Google Maps",
         "companyName": "Google LLC",
         "description": "Navigate the world faster and easier with Google Maps for accurate directions.",
@@ -232,7 +232,7 @@
     },
     {
         "id": 8,
-        "image": "https://cdn-icons-png.flaticon.com/512/732/732221.png",
+        "image": "https://i.ibb.co.com/1JjRp7p2/download-6.png",
         "title": "Microsoft Word",
         "companyName": "Microsoft Corporation",
         "description": "Create, edit, and share documents with one of the most popular word processors.",
@@ -265,7 +265,7 @@
     },
     {
         "id": 9,
-        "image": "https://cdn-icons-png.flaticon.com/512/281/281769.png",
+        "image": "https://i.ibb.co.com/LdkrDnPd/download-5.png",
         "title": "Facebook",
         "companyName": "Meta Platforms",
         "description": "Connect with friends, share updates, and discover new communities worldwide.",
@@ -298,7 +298,7 @@
     },
     {
         "id": 10,
-        "image": "https://cdn-icons-png.flaticon.com/512/888/888879.png",
+        "image": "https://i.ibb.co.com/GvT8CrH2/download-4.png",
         "title": "Netflix",
         "companyName": "Netflix Inc.",
         "description": "Watch movies, TV shows, and Netflix Originals anytime, anywhere.",
@@ -331,7 +331,7 @@
     },
     {
         "id": 11,
-        "image": "https://cdn-icons-png.flaticon.com/512/732/732200.png",
+        "image": "https://i.ibb.co.com/1YGrFbZx/images.png",
         "title": "Google Chrome",
         "companyName": "Google LLC",
         "description": "Fast, secure, and easy-to-use web browser for mobile and desktop.",
@@ -364,7 +364,7 @@
     },
     {
         "id": 12,
-        "image": "https://cdn-icons-png.flaticon.com/512/888/888853.png",
+        "image": "https://i.ibb.co.com/pskvJKz/download-3.png",
         "title": "Gmail",
         "companyName": "Google LLC",
         "description": "Reliable, secure email service from Google with spam protection and cloud sync.",
@@ -397,7 +397,7 @@
     },
     {
         "id": 13,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/TikTok_logo.svg/512px-TikTok_logo.svg.png",
+        "image": "https://i.ibb.co.com/5WKZ2x4K/download-2.png",
         "title": "TikTok",
         "companyName": "ByteDance Ltd.",
         "description": "Short-form mobile videos to laugh, learn, and be entertained.",
@@ -430,7 +430,7 @@
     },
     {
         "id": 14,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Snapchat_logo.svg/512px-Snapchat_logo.svg.png",
+        "image": "https://i.ibb.co.com/zhXzYwLY/download.jpg",
         "title": "Snapchat",
         "companyName": "Snap Inc.",
         "description": "Share the moment with the world via snaps and fun filters.",
@@ -463,7 +463,7 @@
     },
     {
         "id": 15,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Adobe_Photoshop_logo.svg/512px-Adobe_Photoshop_logo.svg.png",
+        "image": "https://i.ibb.co.com/VWs4dsBT/download-1.png",
         "title": "Adobe Photoshop Express",
         "companyName": "Adobe Inc.",
         "description": "Edit photos quickly on mobile, with powerful tools and filters.",
@@ -496,7 +496,7 @@
     },
     {
         "id": 16,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Zoom_Communications_Logo.svg/512px-Zoom_Communications_Logo.svg.png",
+        "image": "https://i.ibb.co.com/dJbRDLYk/zoom-cloud-meetings-android.png",
         "title": "Zoom Cloud Meetings",
         "companyName": "Zoom Video Communications",
         "description": "High-quality video meetings, chats, and online collaboration platform.",
@@ -529,7 +529,7 @@
     },
     {
         "id": 17,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/WhatsApp_business_logo.svg/512px-WhatsApp_business_logo.svg.png",
+        "image": "https://i.ibb.co.com/wNX3fW5j/download.png",
         "title": "WhatsApp Business",
         "companyName": "Meta Platforms",
         "description": "Business-focused version of WhatsApp to interact with customers effectively.",
@@ -562,7 +562,7 @@
     },
     {
         "id": 18,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Discord_logo.svg/512px-Discord_logo.svg.png",
+        "image": "https://i.ibb.co.com/wNZcdSTb/image.png",
         "title": "Discord",
         "companyName": "Discord Inc.",
         "description": "Voice, video, and text chat for gamers, friends, and communities.",
@@ -595,7 +595,7 @@
     },
     {
         "id": 19,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Reddit_logo_orange.svg/512px-Reddit_logo_orange.svg.png",
+        "image": "https://i.ibb.co.com/xqRN2Rw3/humpolec-czech-republic-november-reddit-button-social-media-phone-icon-symbol-logo-editorial-web-207.webp",
         "title": "Reddit",
         "companyName": "Reddit Inc.",
         "description": "Discover forums, communities, and topics you love. Join the conversation.",
@@ -628,7 +628,7 @@
     },
     {
         "id": 20,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Skype_logo_2020.svg/512px-Skype_logo_2020.svg.png",
+        "image": "https://i.ibb.co.com/tpV8X5hF/unnamed.png",
         "title": "Skype",
         "companyName": "Microsoft Corporation",
         "description": "Call and chat with friends, family and co-workers for free.",
