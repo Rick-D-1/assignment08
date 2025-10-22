@@ -1,31 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { IoMdDownload } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 
 const Install = () => {
     const [installedApps, setInstalledApps] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [sortBy, setSortBy] = useState("default");
 
     useEffect(() => {
-        const saved = JSON.parse(localStorage.getItem("installedApps")) || [];
-        setInstalledApps(saved);
+        const savedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+        setInstalledApps(savedApps);
     }, []);
 
-    const handleSearch = (e) => {
-        const term = e.target.value.toLowerCase();
-        setSearchTerm(term);
-        setLoading(true);
 
-        setTimeout(() => {
-            const saved = JSON.parse(localStorage.getItem("installedApps")) || [];
-            const filtered = saved.filter((app) =>
-                app.title.toLowerCase().includes(term)
-            );
-            setInstalledApps(filtered);
-            setLoading(false);
-        }, 500);
+    const handleUninstall = (id) => {
+        const updated = installedApps.filter(app => app.id !== id);
+        setInstalledApps(updated);
+        localStorage.setItem("installedApps", JSON.stringify(updated));
+        toast.info("App uninstalled successfully!");
     };
+
+
+    const handleSort = (order) => {
+        setSortBy(order);
+        let sorted = [...installedApps];
+        if (order === "size") sorted.sort((a, b) => a.size - b.size);
+        if (order === "downloads") sorted.sort((a, b) => b.downloads - a.downloads);
+        setInstalledApps(sorted);
+    };
+
 
     const formatNumber = (num) => {
         if (num >= 1_000_000_000) return (num / 1_000_000_000).toFixed(1) + "B";
@@ -36,42 +39,33 @@ const Install = () => {
 
     return (
         <div className="max-w-[1440px] mx-auto my-10 px-5">
+
             <div className="text-center mb-10">
-                <h1 className="text-4xl font-bold text-[#0F172A]">
-                    Your Installed Apps
-                </h1>
+                <h1 className="text-4xl font-bold text-[#0F172A]">Your Installed Apps</h1>
                 <p className="text-gray-500">
                     Explore All Trending Apps on the Market developed by us
                 </p>
             </div>
 
-            <div className="flex justify-end mb-5">
-                <input
-                    type="text"
-                    placeholder="Search installed apps..."
-                    value={searchTerm}
-                    onChange={handleSearch}
-                    className="border border-gray-300 rounded-md px-4 py-2 w-full md:w-80 focus:outline-none focus:ring-2 focus:ring-[#9F62F2]"
-                />
+            <div className="flex justify-between items-center mb-5 border-b pb-3">
+                <h2 className="font-semibold text-gray-700">
+                    {installedApps.length} Apps Found
+                </h2>
+                <select
+                    onChange={(e) => handleSort(e.target.value)}
+                    value={sortBy}
+                    className="border border-gray-300 rounded-md px-3 py-1 text-gray-600"
+                >
+                    <option value="default">Sort By</option>
+                    <option value="size">Low-High</option>
+                    <option value="downloads">High-Low</option>
+                </select>
             </div>
 
-            {loading ? (
-                <div className="flex flex-col justify-center items-center py-20">
-                    <div
-                        className="w-16 h-16 border-4 border-t-transparent rounded-full animate-spin"
-                        style={{
-                            borderColor: "#9F62F2",
-                            borderTopColor: "transparent",
-                            borderRightColor: "#632EE3",
-                        }}
-                    ></div>
-                    <p className="mt-4 text-[#632EE3] font-semibold animate-pulse">
-                        Searching...
-                    </p>
-                </div>
-            ) : installedApps.length === 0 ? (
+
+            {installedApps.length === 0 ? (
                 <p className="text-center text-gray-500 mt-10 text-lg">
-                    No apps found.
+                    No apps installed yet.
                 </p>
             ) : (
                 <div className="space-y-4">
@@ -98,19 +92,19 @@ const Install = () => {
                                         {app.title}
                                     </h2>
                                     <div className="flex items-center gap-4 text-gray-500 text-sm">
-                                        <p className="flex items-center gap-1">
-                                            <IoMdDownload className="text-cyan-600 text-lg" />
-                                            {formatNumber(app.downloads)}
-                                        </p>
-                                        <p className="flex items-center gap-1">
-                                            <FaStar className="text-yellow-500 text-lg" />
-                                            {app.ratingAvg}
-                                        </p>
+                                        <p className="flex items-center"><p className="text-cyan-600 text-lg"><IoMdDownload /></p>{formatNumber(app.downloads)}</p>
+                                        <p className="flex items-center"> <p className="text-lg text-yellow-500">
+                                            <FaStar /></p> {app.ratingAvg}</p>
                                         <p>{app.size} MB</p>
                                     </div>
                                 </div>
                             </div>
-                            <button className="px-5 py-2 bg-[#00D390] hover:bg-[#00b57c] text-white font-semibold rounded-md">
+
+
+                            <button
+                                onClick={() => handleUninstall(app.id)}
+                                className="px-5 py-2 bg-[#00D390] hover:bg-[#00b57c] text-white font-semibold rounded-md"
+                            >
                                 Uninstall
                             </button>
                         </div>

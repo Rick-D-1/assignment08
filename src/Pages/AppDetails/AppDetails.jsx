@@ -58,7 +58,7 @@ const AppDetails = () => {
                 <div className="w-full">
                     <h2 className="text-3xl font-bold">{singleApp.title}</h2>
                     <p className="text-lg text-gray-500 font-semibold pb-2">
-                        Developed by <span className="text-purple-500">{singleApp.companyName}</span>
+                        Developed by <span className="text-purple-500">productive.io</span>
                     </p>
 
                     <div className="flex flex-wrap gap-10 border-t pt-5 border-gray-300">
