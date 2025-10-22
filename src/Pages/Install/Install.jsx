@@ -45,7 +45,6 @@ const Install = () => {
                 </p>
             </div>
 
-            {/* 🔍 Search Bar */}
             <div className="flex justify-end mb-5">
                 <input
                     type="text"
@@ -56,7 +55,6 @@ const Install = () => {
                 />
             </div>
 
-            {/* 🌀 Loader during search */}
             {loading ? (
                 <div className="flex flex-col justify-center items-center py-20">
                     <div
