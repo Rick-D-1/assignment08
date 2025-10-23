@@ -5,30 +5,37 @@ import { FaStar } from "react-icons/fa";
 
 const Install = () => {
     const [installedApps, setInstalledApps] = useState([]);
+    const [allApps, setAllApps] = useState([]);
     const [sortBy, setSortBy] = useState("default");
 
     useEffect(() => {
         const savedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
         setInstalledApps(savedApps);
+        setAllApps(savedApps);
     }, []);
-
 
     const handleUninstall = (id) => {
         const updated = installedApps.filter(app => app.id !== id);
         setInstalledApps(updated);
+        setAllApps(updated);
         localStorage.setItem("installedApps", JSON.stringify(updated));
         toast.info("App uninstalled successfully!");
     };
 
-
     const handleSort = (order) => {
         setSortBy(order);
         let sorted = [...installedApps];
-        if (order === "size") sorted.sort((a, b) => a.size - b.size);
-        if (order === "downloads") sorted.sort((a, b) => b.downloads - a.downloads);
+
+        if (order === "size") {
+            sorted.sort((a, b) => Number(a.size) - Number(b.size));
+        } else if (order === "downloads") {
+            sorted.sort((a, b) => Number(b.downloads) - Number(a.downloads));
+        } else if (order === "default") {
+            sorted = [...allApps];
+        }
+
         setInstalledApps(sorted);
     };
-
 
     const formatNumber = (num) => {
         if (num >= 1_000_000_000) return (num / 1_000_000_000).toFixed(1) + "B";
@@ -39,7 +46,6 @@ const Install = () => {
 
     return (
         <div className="max-w-[1440px] mx-auto my-10 px-5">
-
             <div className="text-center mb-10">
                 <h1 className="text-4xl font-bold text-[#0F172A]">Your Installed Apps</h1>
                 <p className="text-gray-500">
@@ -61,7 +67,6 @@ const Install = () => {
                     <option value="downloads">High-Low</option>
                 </select>
             </div>
-
 
             {installedApps.length === 0 ? (
                 <p className="text-center text-gray-500 mt-10 text-lg">
@@ -92,14 +97,22 @@ const Install = () => {
                                         {app.title}
                                     </h2>
                                     <div className="flex items-center gap-4 text-gray-500 text-sm">
-                                        <p className="flex items-center"><p className="text-cyan-600 text-lg"><IoMdDownload /></p>{formatNumber(app.downloads)}</p>
-                                        <p className="flex items-center"> <p className="text-lg text-yellow-500">
-                                            <FaStar /></p> {app.ratingAvg}</p>
+                                        <p className="flex items-center">
+                                            <span className="text-cyan-600 text-lg">
+                                                <IoMdDownload />
+                                            </span>
+                                            {formatNumber(app.downloads)}
+                                        </p>
+                                        <p className="flex items-center">
+                                            <span className="text-lg text-yellow-500">
+                                                <FaStar />
+                                            </span>
+                                            {app.ratingAvg}
+                                        </p>
                                         <p>{app.size} MB</p>
                                     </div>
                                 </div>
                             </div>
-
 
                             <button
                                 onClick={() => handleUninstall(app.id)}
